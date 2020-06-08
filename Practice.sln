@@ -9,6 +9,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Task1", "Task1", "{E8D68770
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoodDay", "GoodDay\GoodDay.csproj", "{D0D6DD9B-59BC-4982-B355-717DBB98BDAC}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Task2", "Task2", "{3B87F6B9-D1C2-40FC-94F9-0507B9B1C866}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LettersCount", "LettersCount\LettersCount.csproj", "{35F821C9-B2FE-46A9-A73B-EE0615FDD150}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,12 +27,17 @@ Global
 		{D0D6DD9B-59BC-4982-B355-717DBB98BDAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0D6DD9B-59BC-4982-B355-717DBB98BDAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D0D6DD9B-59BC-4982-B355-717DBB98BDAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35F821C9-B2FE-46A9-A73B-EE0615FDD150}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35F821C9-B2FE-46A9-A73B-EE0615FDD150}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35F821C9-B2FE-46A9-A73B-EE0615FDD150}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35F821C9-B2FE-46A9-A73B-EE0615FDD150}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{D0D6DD9B-59BC-4982-B355-717DBB98BDAC} = {E8D68770-42DD-473F-A509-3D78FF89BF5E}
+		{35F821C9-B2FE-46A9-A73B-EE0615FDD150} = {3B87F6B9-D1C2-40FC-94F9-0507B9B1C866}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {35393260-5A98-414C-89E6-B26E412BCD56}
