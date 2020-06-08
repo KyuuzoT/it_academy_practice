@@ -14,6 +14,7 @@ namespace GoodDay
                 again = Console.ReadKey();
                 Console.WriteLine();
             } while (again.Key != ConsoleKey.N);
+
         }
     }
 }
