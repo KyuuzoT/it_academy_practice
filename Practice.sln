@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.28307.1145
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "it_academy_practice", "it_academy_practice\it_academy_practice.csproj", "{E93FA3DE-6CC9-4630-8220-BBAF534F0A34}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Task1", "Task1", "{E8D68770-42DD-473F-A509-3D78FF89BF5E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoodDay", "GoodDay\GoodDay.csproj", "{D0D6DD9B-59BC-4982-B355-717DBB98BDAC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +19,16 @@ Global
 		{E93FA3DE-6CC9-4630-8220-BBAF534F0A34}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E93FA3DE-6CC9-4630-8220-BBAF534F0A34}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E93FA3DE-6CC9-4630-8220-BBAF534F0A34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0D6DD9B-59BC-4982-B355-717DBB98BDAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0D6DD9B-59BC-4982-B355-717DBB98BDAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0D6DD9B-59BC-4982-B355-717DBB98BDAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0D6DD9B-59BC-4982-B355-717DBB98BDAC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D0D6DD9B-59BC-4982-B355-717DBB98BDAC} = {E8D68770-42DD-473F-A509-3D78FF89BF5E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {35393260-5A98-414C-89E6-B26E412BCD56}
