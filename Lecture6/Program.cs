@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace Lecture6
 {
@@ -31,7 +32,7 @@ namespace Lecture6
             differentElemsArr[0] = temp;
             string tempStr = differentElemsArr[2] + ", guys!";
             differentElemsArr[2] = tempStr;
-            Console.WriteLine("Changed array: ");
+            Console.WriteLine("\nChanged array: ");
             foreach (var item in differentElemsArr)
             {
                 Console.WriteLine(item);
@@ -40,6 +41,20 @@ namespace Lecture6
 
         private static void arrayPrintFindMax()
         {
+            Console.WriteLine("\n");
+            int[] randomArray = new int[13];
+            Random rnd = new Random();
+            for (int i = 0; i < randomArray.Length; i++)
+            {
+                randomArray[i] = rnd.Next(1, 100);
+            }
+
+            foreach (int number in randomArray)
+            {
+                Console.Write($"{number} ");
+            }
+            int maxValue = randomArray.OrderByDescending(x => x).First();
+            Console.WriteLine($"\nMax element: {maxValue}");
         }
 
         private static void boxingUnboxing()
