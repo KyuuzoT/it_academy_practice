@@ -22,7 +22,7 @@ namespace Lecture6
         private static void arrayWithThreeDifferentElems()
         {
             object[] differentElemsArr = new object[3] { 32, 'A', "Hello" };
-
+            Console.WriteLine("Original array: ");
             foreach (var item in differentElemsArr)
             {
                 Console.WriteLine(item);
@@ -31,7 +31,7 @@ namespace Lecture6
             differentElemsArr[0] = temp;
             string tempStr = differentElemsArr[2] + ", guys!";
             differentElemsArr[2] = tempStr;
-
+            Console.WriteLine("Changed array: ");
             foreach (var item in differentElemsArr)
             {
                 Console.WriteLine(item);
