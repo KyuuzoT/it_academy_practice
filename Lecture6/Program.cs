@@ -21,6 +21,21 @@ namespace Lecture6
 
         private static void arrayWithThreeDifferentElems()
         {
+            object[] differentElemsArr = new object[3] { 32, 'A', "Hello" };
+
+            foreach (var item in differentElemsArr)
+            {
+                Console.WriteLine(item);
+            }
+            int temp = (int)differentElemsArr[0] + 10;
+            differentElemsArr[0] = temp;
+            string tempStr = differentElemsArr[2] + ", guys!";
+            differentElemsArr[2] = tempStr;
+
+            foreach (var item in differentElemsArr)
+            {
+                Console.WriteLine(item);
+            }
         }
 
         private static void arrayPrintFindMax()
