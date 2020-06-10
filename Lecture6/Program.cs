@@ -62,9 +62,9 @@ namespace Lecture6
             short shortVal = 1;
             object objValBox = shortVal;
             Console.WriteLine($"Boxing: {objValBox}, type:{objValBox.GetType()}");
-            //sbyte sbValUnbox = (sbyte)objValBox;//System.InvalidCastException?!
+            sbyte sbValUnbox = (sbyte)(short)objValBox;//System.InvalidCastException?!
 
-            //Console.WriteLine($"UnBoxing: {sbValUnbox}, type:{sbValUnbox.GetType()}");
+            Console.WriteLine($"UnBoxing: {sbValUnbox}, type:{sbValUnbox.GetType()}");
         }
     }
 }
