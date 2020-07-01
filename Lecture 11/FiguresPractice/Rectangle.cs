@@ -11,7 +11,7 @@ namespace FiguresPractice
         private float _xSide;
         private float _ySide;
 
-        public const SHAPE_NAME = "Rectangle";
+        public const string SHAPE_NAME = "Rectangle";
 
         public float XSide
         {
