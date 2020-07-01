@@ -9,5 +9,6 @@ namespace FiguresPractice
     interface IShape
     {
         float ShapeSquare();
+        string GetShapeInfo();
     }
 }

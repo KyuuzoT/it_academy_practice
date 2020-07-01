@@ -53,5 +53,11 @@ namespace FiguresPractice
         {
             return _xSide * _ySide;
         }
+
+        public string GetShapeInfo()
+        {
+            return $"This is {SHAPE_NAME}. CLR Type is {this.GetType()}. Square is {this.ShapeSquare()} with sides:" +
+                $"\nSide X = {_xSide}\nSide Y = {_ySide}";
+        }
     }
 }

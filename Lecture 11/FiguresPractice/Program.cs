@@ -9,72 +9,90 @@ namespace FiguresPractice
     class Program
     {
         private static int _arraySize = 5;
+        private static int _indexer = 0;
+
         static void Main(string[] args)
         {
-            
-            Console.WriteLine("Choose the type of figure to add into array:");
-            Console.WriteLine("1. Circle\n2. Triangle\n 3. Rectangle");
-
-            CreateArrayOfShapes();
-
+            IShape[] shapes = CreateArrayOfShapes();
+            PrintArray(shapes);
             Console.ReadKey();
         }
 
-        private static void CreateArrayOfShapes()
+        private static IShape[] CreateArrayOfShapes()
         {
             IShape[] shapes = new IShape[_arraySize];
-            for (int i = 0; i < shapes.Length; i++)
+
+            do
             {
                 Console.WriteLine("Choose the type of figure to add into array:");
-                Console.WriteLine("1. Circle\n2. Triangle\n 3. Rectangle");
-                FillArrayOfShapes(shapes, i);
-            }
+                Console.WriteLine("1. Circle\n2. Triangle\n3. Rectangle");
+                FillArrayOfShapes(shapes);
+            } while (_indexer < shapes.Length);
+
+            return shapes;
         }
 
-        private static void FillArrayOfShapes(IShape[] shapes, int i)
+        private static void FillArrayOfShapes(IShape[] shapes)
         {
-            var choice = Console.Read();
-            switch (choice)
+            var choice = Console.ReadKey();
+            Console.WriteLine();
+            switch (choice.Key)
             {
-                case 1:
+                case ConsoleKey.D1:
+                case ConsoleKey.NumPad1:
                     Circle circle = CreateCircle();
-                    shapes[i] = circle;
+                    shapes[_indexer] = circle;
                     break;
-                case 2:
+                case ConsoleKey.D2:
+                case ConsoleKey.NumPad2:
                     Triangle triangle = CreateTriangle();
-                    shapes[i] = triangle;
+                    shapes[_indexer] = triangle;
                     break;
-                case 3:
+                case ConsoleKey.D3:
+                case ConsoleKey.NumPad3:
                     Rectangle rectangle = CreateRectangle();
-                    shapes[i] = rectangle;
+                    shapes[_indexer] = rectangle;
                     break;
                 default:
                     Console.WriteLine("Invalid input!");
-                    break;
+                    return;
             }
+            _indexer++;
         }
 
         private static Rectangle CreateRectangle()
         {
             Rectangle rectangle = new Rectangle();
+
             Console.WriteLine("Input sides of rectangle:");
             Console.WriteLine("Side x:");
-            rectangle.XSide = float.Parse(Console.ReadLine());
+            rectangle.XSide = InputFloat();
             Console.WriteLine("Side y:");
-            rectangle.YSide = float.Parse(Console.ReadLine());
+            rectangle.YSide = InputFloat();
+
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine($"\nSquare of rectangle: {rectangle.ShapeSquare()}\n");
+            Console.ResetColor();
+
             return rectangle;
-        }
+        }       
 
         private static Triangle CreateTriangle()
         {
             Triangle triangle = new Triangle();
+
             Console.WriteLine("Input sides of triangle:");
             Console.WriteLine("Side a:");
-            triangle.ASide = float.Parse(Console.ReadLine());
+            triangle.ASide = InputFloat();
             Console.WriteLine("Side b:");
-            triangle.BSide = float.Parse(Console.ReadLine());
+            triangle.BSide = InputFloat();
             Console.WriteLine("Side c:");
-            triangle.CSide = float.Parse(Console.ReadLine());
+            triangle.CSide = InputFloat();
+
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine($"\nSquare of triangle: {triangle.ShapeSquare()}\n");
+            Console.ResetColor();
+
             return triangle;
         }
 
@@ -82,8 +100,37 @@ namespace FiguresPractice
         {
             Circle circle = new Circle();
             Console.WriteLine("Input radius of circle:");
-            circle.Radius = float.Parse(Console.ReadLine());
+            circle.Radius = InputFloat();
+
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine($"\nSquare of circle: {circle.ShapeSquare()}\n");
+            Console.ResetColor();
+
             return circle;
+        }
+
+        private static float InputFloat()
+        {
+            float value;
+            while (true)
+            {
+                if (!float.TryParse(Console.ReadLine(), out value))
+                {
+                    Console.WriteLine("Invalid input!");
+                }
+                else
+                {
+                    return value;
+                }
+            }
+        }
+
+        private static void PrintArray(IShape[] shapes)
+        {
+            foreach (var item in shapes)
+            {
+                Console.WriteLine(item.GetShapeInfo());
+            }
         }
     }
 }

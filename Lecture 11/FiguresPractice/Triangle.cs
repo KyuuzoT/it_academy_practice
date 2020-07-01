@@ -71,12 +71,18 @@ namespace FiguresPractice
         public float ShapeSquare()
         {
             float halfPerimeter = CalculateHalfPerimeter();
-            return (float)(Math.Sqrt((halfPerimeter * (halfPerimeter - a) * (halfPerimeter - b) * (halfPerimeter - c))));
+            return (float)(Math.Sqrt((halfPerimeter * (halfPerimeter - _aSide) * (halfPerimeter - _bSide) * (halfPerimeter - _cSide))));
         }
 
         private float CalculateHalfPerimeter()
         {
             return (_aSide + _bSide + _cSide)/2;
+        }
+
+        public string GetShapeInfo()
+        {
+            return $"This is {SHAPE_NAME}. CLR Type is {this.GetType()}. Square is {this.ShapeSquare()} with sides:" +
+                $"\nSide A = {_aSide}\nSide B = {_bSide}\nSide C = {_cSide}";
         }
     }
 }
