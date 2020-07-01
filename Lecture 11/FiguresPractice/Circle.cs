@@ -10,6 +10,8 @@ namespace FiguresPractice
     {
         private float _radius;
 
+        public const string SHAPE_NAME = "Circle";
+
         public float Radius
         {
             get => _radius;
