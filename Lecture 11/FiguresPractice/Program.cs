@@ -27,24 +27,63 @@ namespace FiguresPractice
             {
                 Console.WriteLine("Choose the type of figure to add into array:");
                 Console.WriteLine("1. Circle\n2. Triangle\n 3. Rectangle");
-                var choice = Console.Read();
-                switch (choice)
-                {
-                    case 1:
-                        Circle circle = new Circle;
-                        Console.WriteLine("Input radius of circle:");
-                        circle.Radius = float.Parse(Console.ReadLine());
-                        shapes[i] = circle;
-                        break;
-                    case 2:
-                        break;
-                    case 3:
-                        break;
-                    default:
-                        Console.WriteLine("Invalid input!");
-                        break;
-                }
+                FillArrayOfShapes(shapes, i);
             }
+        }
+
+        private static void FillArrayOfShapes(IShape[] shapes, int i)
+        {
+            var choice = Console.Read();
+            switch (choice)
+            {
+                case 1:
+                    Circle circle = CreateCircle();
+                    shapes[i] = circle;
+                    break;
+                case 2:
+                    Triangle triangle = CreateTriangle();
+                    shapes[i] = triangle;
+                    break;
+                case 3:
+                    Rectangle rectangle = CreateRectangle();
+                    shapes[i] = rectangle;
+                    break;
+                default:
+                    Console.WriteLine("Invalid input!");
+                    break;
+            }
+        }
+
+        private static Rectangle CreateRectangle()
+        {
+            Rectangle rectangle = new Rectangle();
+            Console.WriteLine("Input sides of rectangle:");
+            Console.WriteLine("Side x:");
+            rectangle.XSide = float.Parse(Console.ReadLine());
+            Console.WriteLine("Side y:");
+            rectangle.YSide = float.Parse(Console.ReadLine());
+            return rectangle;
+        }
+
+        private static Triangle CreateTriangle()
+        {
+            Triangle triangle = new Triangle();
+            Console.WriteLine("Input sides of triangle:");
+            Console.WriteLine("Side a:");
+            triangle.ASide = float.Parse(Console.ReadLine());
+            Console.WriteLine("Side b:");
+            triangle.BSide = float.Parse(Console.ReadLine());
+            Console.WriteLine("Side c:");
+            triangle.CSide = float.Parse(Console.ReadLine());
+            return triangle;
+        }
+
+        private static Circle CreateCircle()
+        {
+            Circle circle = new Circle();
+            Console.WriteLine("Input radius of circle:");
+            circle.Radius = float.Parse(Console.ReadLine());
+            return circle;
         }
     }
 }
