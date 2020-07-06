@@ -8,6 +8,8 @@ namespace Identifier
 {
     class Program
     {
+        private static int _newID = 100;
+
         static void Main(string[] args)
         {
             UniqueItem item1 = new UniqueItem();
@@ -15,7 +17,7 @@ namespace Identifier
             UniqueItem item2 = new UniqueItem();
             UniqueItem item3 = new UniqueItem();
 
-            UniqueItem.ID = 100;
+            UniqueItem.ID = _newID;
             UniqueItem item4 = new UniqueItem();
             Console.WriteLine(item4.GetID);
             UniqueItem item5 = new UniqueItem();
