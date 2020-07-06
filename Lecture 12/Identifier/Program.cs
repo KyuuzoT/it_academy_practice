@@ -11,11 +11,13 @@ namespace Identifier
         static void Main(string[] args)
         {
             UniqueItem item1 = new UniqueItem();
+            Console.WriteLine(item1.GetID);
             UniqueItem item2 = new UniqueItem();
             UniqueItem item3 = new UniqueItem();
 
             UniqueItem.ID = 100;
             UniqueItem item4 = new UniqueItem();
+            Console.WriteLine(item4.GetID);
             UniqueItem item5 = new UniqueItem();
             UniqueItem item6 = new UniqueItem();
 

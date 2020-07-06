@@ -28,6 +28,11 @@ namespace Identifier
             }
         }
 
+        public string GetID
+        {
+            get => $"{this} ID: {_id}";
+        }
+
         public UniqueItem()
         {
             _id++;
