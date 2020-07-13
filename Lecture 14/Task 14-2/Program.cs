@@ -15,7 +15,5 @@ namespace Task_14_2
 
             Console.ReadKey();
         }
-
-
     }
 }

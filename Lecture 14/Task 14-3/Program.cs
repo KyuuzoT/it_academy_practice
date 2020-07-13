@@ -10,6 +10,7 @@ namespace Task_14_3
         private static int _phoneRndMin = 8800555;
         private static int _phoneRndMax = int.MaxValue;
         private static int _quantityOfNeighbours = 20;
+
         static void Main(string[] args)
         {
             IList<Neighbour> floorNeighbours = new List<Neighbour>();
