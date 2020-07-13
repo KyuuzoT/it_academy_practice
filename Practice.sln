@@ -21,6 +21,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lecture 11", "Lecture 11", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FiguresPractice", "Lecture 11\FiguresPractice\FiguresPractice.csproj", "{DB1D7E2B-FD23-4C38-9197-ADBEF7ACF3F3}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lecture 14", "Lecture 14", "{67A81CE1-629F-43A4-AC5F-38C336854A8A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
